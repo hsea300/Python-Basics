@@ -1,0 +1,159 @@
+#london app developer youtube 
+
+#hello world lec
+
+hello_world_text='hello world'
+print(hello_world_text)
+print(hello_world_text)
+print(hello_world_text)
+print(hello_world_text)
+
+#variable lec
+
+var1= 1
+var2=25
+total= var1 +var2
+print(total)
+
+if 1==1:
+	print('one equals one')
+
+#if elif, else lec
+
+apples = 8
+if apples==7:
+	print('apples equals 7')
+elif apples==8:
+	print('apples equals 8')
+else:
+	print('apples does not equal 7 or 8')
+
+#while loop
+
+apples=10
+while apples > 0:
+	print('we have ' +  str(apples) + ' apples') 
+	apples = apples-1
+print('we have no apples.')
+
+
+#functions-can change variables that can change the output
+
+print('hello mark')
+print('we have 6 apples in stock.')
+
+print('hello mel')
+print('we have 6 apples in stock.')
+
+print('hello dave')
+print('we have 6 apples in stock.')
+
+#Define functions
+
+def greet_mark():
+	print('hello mark')
+	print('we have 6 apples in stock.')
+
+def greet_mel():
+	print('hello mel')
+	print('we have 6 apples in stock.')
+
+
+def greet_dave():
+	print('hello dave')
+	print('we have 6 apples in stock.')
+
+#shorten code
+
+def greet_customer(name):
+	print('hello ' +name)
+	print('we have 6 apples in stock.')
+greet_customer('mark')
+
+#Define functions
+
+def greet_mark():
+	print('hello mark')
+	print('we have 6 apples in stock.')
+
+def greet_mel():
+	print('hello mel')
+	print('we have 6 apples in stock.')
+
+
+def greet_dave():
+	print('hello dave')
+	print('we have 6 apples in stock.')
+
+#shorten code
+
+def greet_customer(name, num_apples=7):
+	print('hello ' +name)
+	print('we have ' +str(num_apples)+ ' apples in stock.')
+
+greet_customer('mark', )
+greet_customer('mel', 5)
+greet_customer('dave', 3)
+
+
+#dictionary and for loops
+#string name={'name': value, 'etc': }
+
+apples= {'cox': 17, 'gala': 10, 'fuji':1}
+
+#retrive from dictionary
+cox_stock=apples['cox']
+print('we have '+str(cox_stock)+ ' cox apples.')
+
+
+for apple in apples.keys():
+	print(apple)
+
+
+for apple, stock_count in apples.items():
+	print('we have ' +str(stock_count)+' ' +apple + 'apples.')
+
+mac_apples=apples.get('macintosh',0)
+print(mac_apples)
+
+#you can download other ppls modules so you do not need to remake something. 
+
+
+#Lists and sets can do strings, numbers, booleans
+available_apples =['cox','gala','fuji']
+available_apples.append('royal gala')
+available_apples.remove('fuji')
+
+#add new apples to the list
+new_apples=['empire', 'red', 'cox']
+available_apples.extend(new_apples)
+print(available_apples)
+
+
+#only have unique names of apples
+unique_apples =set(available_apples)
+available_apples=list(unique_apples)
+
+print(available_apples)
+
+#you can download other ppls modules so you do not need to remake something. 
+#Virtual enivronment
+
+#C:\Users\C\Desktop\Python>python -m venv env
+#created a python virtual environment folders, need to activate it before using it. 
+#C:\Users\C\Desktop\Python>env\scripts\activate.bat
+
+
+#env\scripts\activate.bat
+
+
+
+#Installing and using packages
+
+#pip install 'name of package to install i.e. requests'
+
+import requests #pip freeze-shows how many packages are in use
+
+r = requests.get('http://google.com')
+print(r.content)
+
